@@ -59,7 +59,7 @@ step: function(state, circle) {
 
     circle.path.setAttribute('stroke', state.color);
 
-    let value = Math.round(circle.value() * 32);
+    let value = Math.round(circle.value() * 10);
 
     circle.setText(value);
 
