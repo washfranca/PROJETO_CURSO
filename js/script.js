@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-// Progress bar
+// Progress bar //
 let containerA= document.getElementById("circleA");
 
 let circleA = new ProgressBar.Circle(containerA, {
@@ -89,7 +89,7 @@ step: function(state, circle) {
 
 });
 
-// Iniciando o loader quando o usuário chaga  no elemento
+// Iniciando o loader quando o usuário chaga  no elemento //
 let dataAreaOffset = $('#data-area').offset();
 let stop = 0;
 
@@ -110,7 +110,7 @@ $(window).scroll(function(e) {
 
 });
 
-// Parallax
+// Parallax //
 setTimeout(function() {
 
     $('#data-area').parallax({imageSrc: 'img/cidadeparallax.png'});
@@ -118,7 +118,7 @@ setTimeout(function() {
 
 }, 250);
 
-// Filtro do Portfólio
+// Filtro do Portfólio //
 
 $('.filter-btn').on('click', function(){
 
@@ -154,6 +154,44 @@ function eachBoxes(type , boxes) {
         });
     }
 }
+// Scroll para seções
+
+let navBtn = $('.nav-item');
+
+let bannerSection = $('#mainSlider');
+let aboutSection = $('#mabout-area');
+let servicesSection = $('#services-area');
+let teamSection = $('#team-area');
+let portfolioSection = $('#portfolio-area');
+let contactSection = $('#contact-area');
+
+let scrollTo = '';
+
+$(navBtn).click(function(){
+
+    let btnId = $(this).attr('id');
+
+    
+    if(btnId == 'about-menu') {
+        scrollTo = aboutSection;
+    } else if(btnId == 'services-menu'){
+        scrollTo = servicesSection;
+    } else if(btnId == 'team-menu') {
+        scrollTo = teamSection;
+    } else if(btnId == 'portfolio-menu') {
+        scrollTo = portfolioSection;
+    } else if(btnId == 'Contact-menu'){
+        scrollTo = contactSection;
+    } else {
+        scrollTo = bannerSection;
+    }
+
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(scrollTo).offset().top - 70
+    }, 1500);
+
+});
+
 
 });
 
