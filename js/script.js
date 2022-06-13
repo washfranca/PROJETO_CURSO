@@ -159,7 +159,8 @@ function eachBoxes(type , boxes) {
 let navBtn = $('.nav-item');
 
 let bannerSection = $('#mainSlider');
-let aboutSection = $('#mabout-area');
+let aboutSection = $('#about-area');
+let menuSection = $('#menu-area');
 let servicesSection = $('#services-area');
 let teamSection = $('#team-area');
 let portfolioSection = $('#portfolio-area');
@@ -187,8 +188,7 @@ $(navBtn).click(function(){
     }
 
     $([document.documentElement, document.body]).animate({
-        scrollTop: $(scrollTo).offset().top - 70
-    }, 1500);
+        scrollTop: $(scrollTo).offset().top - 70 }, 1500);
 
 });
 

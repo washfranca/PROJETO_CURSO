@@ -19,7 +19,7 @@ p.li {
 
 /* Barra de Navegação */
 header, .navbar {
-    background-color: #353D41;
+    background-color: #f1f5f7;
 }
 
 #nav-container {
@@ -34,15 +34,15 @@ header, .navbar {
 
 .navbar-brand {
     padding: 0;
-    color: #fff;
+    color: rgb(8, 8, 8);
 }
 
 .navbar-brand:hover {
-    color: #fff;
+    color: rgb(15, 15, 15);
 }
 
 #navbar-links a {
-    color: #fff;
+    color: rgb(15, 15, 15);
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
